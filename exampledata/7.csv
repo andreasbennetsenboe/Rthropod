@@ -1,0 +1,30 @@
+ID;Genus;Species;Family;Order;Class;Keyingpoint;Lifehistorypoint;Initials;Redlist;Team;Members;Quizpoint
+1;Forficula;auricularia;Forficulidae ;Dermaptera;Insecta;2;;CB;;Ved-dyrene;4;15
+2;Porcellio;Porcellio;Porcellionidae;Isopoda;Malacostraca;2;;CB;
+3;Strophosoma;capitatum;Curculionidae;Coleoptera;Insecta;2;;ABB;LC
+4;Formica;fusca;Formicidae;Hymenoptera;Insecta;2;10;ABB;
+5;Opilio ;canestrinii;Phalangiidae ;Opiliones;Arachnida;2;;ABB;
+6;Adscita;statices;Zygaenidae;Lipidopera;Insecta;1;;CB;LC
+7;Zelotes;subterraneus;Gnaphosidae;Aranea;Arachnida;3;;SK;
+8;Armadillidium;vulgare;Armadillidiidae;Isopoda;Malacostraca;1;;CB;
+9;Litgobius;forficatus;Lithobiidae;Lithobiomopha;Myriapoda;3;;ABB;
+10;Leistus;ferrugineus;Carabidae;Coleopetra;Insecta;2;;ABB;
+11;Pterostichus;oblongopunctatus;Carabidae;Coleopetra;Insecta;2;;ABB;
+12;Formica;polyctenta;Formicidae;Hymenoptera;Insecta;2;;CB;
+13;Oniscus;asellus;Oniscidae;Isopoda;Malacostraca;2;;CB;
+14;Rhagonycha;fulva;Canatharidae;Coleopetra;Insecta;2;;CB;
+15;Nemastoma;lugubre;Nemastomatidae;Opiliones;Arachnida;2;;CB;
+16;;;;Acari;Arachnida;;;CB;
+17;Cylindroiulus;punctatus;Julidae;Diplopoda;Myriapoda;2;;CB;
+18;Myrmica;ruginodis ;Formicidae;Hymenoptera;Insecta;2;;;
+19;;;;Diptera;Insecta;;;CB;
+20;;;;Collembola;Entognatha;;;CB;
+21;Clubiona;Comta;Cluonidae;Aranea;Arachnida;2;;SK;
+22;Polydesmus;complanatus;Polydesmidae;Polydesmida;Myriapoda;3;;CB;
+23;Xysticus;sp.;Thomisidae;Aranea;Arachnida;2;;SK;
+24;Chorthippus;sp.;Acrididae;Saltatoria;Insecta;2;;HK;
+25;Propylea;quatuordecimpunctata;Coccinellidea;Coleopetra;Insecta;1;;CB;
+26;Palomena;prasina;Pentatomidae;Hemiptera;Insecta;1;1;CB;
+27;Tibellus;oblongus;Philodromedae;Aranea;Arachnida;2;;SK;
+28;Formica;truncorum;Formicadae;Hymenoptera;Insecta;2;;ABB;
+29;Zygiella;sp.;Araneidae;Aranea;Arachnida;2;;SK;

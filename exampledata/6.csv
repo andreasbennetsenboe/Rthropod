@@ -1,0 +1,201 @@
+ID,Genus,Species,Family,Order,Class,Keyingpoint,Lifehistorypoint,Initials,Redlist,dansk navn,Team,Members,Quizpoint
+1,Palomena,prasina,Pentatomidae,Hemiptera,Insecta,1,1,CB,,Grøn bredtæge,6. Malaise campisterne,4,15
+2,Chrysoperla,carnea,Chrysopidae,Neuroptera,Insecta,2,,CB,,
+3,Rhyacophila,fasciata,Rhyachophilidae,Trichoptera,Insecta,2,,CB,,
+4,Coenagrion,puella,Coenagriidae,Odonata,Insecta,3,,ABB,,Hestesko-vandnymfe
+5,Panorpa,communis,Panorpidae,Mecoptera,Insecta,2,,CB,,
+6,Sympetrum,vulgatum,Libeller,Odonata,Insecta,2,,CK,,Almindelig Hedelibel
+7,Libellula,quadrimaculata,Libeller,Odonata,Insecta,2,,SK,,Fireplettet Libel
+8,,,Ichneumonoidea,Hymenoptera,Insecta,2,1,ABB,,"Årvinge, Stilkhvepse"
+9,Enallagma,cyathigerum,Coenagriidae,Odonata,Insecta,3,,CK,,Almindelig Vandnymfe
+10,Biston,betularia,Geometridae,Lepidoptera,Insecta,1,,CB,,Birkemåler
+11,Noctua,pronuba,Noctuidae,Lepidoptera,Insecta,1,5,CB,,Stor smutugle
+12,Phalera,bucephala,Notodontidae,Lepidoptera,Insecta,1,,ABB,,Måneplet
+13,Vanessa,atalanta,Nymphalidae,Lepidoptera,Insecta,1,5,ABB,,Admiral
+14,Crocallis,elinguaria,Geometridae,Lepidoptera,Insecta,1,,ABB,,Okkergul rovmåler
+15,Autographa,gamma,Noctuidae,Lepidoptera,Insecta,1,5,ABB,,Gammaugle
+16,Lycaena,phlaeas,Lycaenidae,Lepidoptera,Insecta,1,,ABB,,Lille ildfugl
+17,Polyommatus,icarus,Lycaenidae,Lepidoptera,Insecta,1,5,ABB,,Almindelig blåfugl
+18,Pieris,napi,Pieridae,Lepidoptera,Insecta,1,,ABB,,Grønåret kålsommerfugl
+19,Hemithea,aestivaria,Geometridae,Lepidoptera,Insecta,1,,ABB,,Lundmåler
+20,Lythria,cruentaria,Geometridae,Lepidoptera,Insecta,1,,CB,,Pupurmåler
+21,Boloria,aquilonaris,Nymphalidae,Lepidoptera,Insecta,1,5,ABB,2,Moseperlemorsommerfugl
+22,Cidaria,fulvata,Geometridae,Lepidoptera,Insecta,1,,CB,,Gul Bladmåler
+23,Agrotis,cavis,Noctuidae,Lepidoptera,Insecta,1,,CB,,Høgeurt-Ugle
+24,Tholera,cespitis,Noctuidae,Lepidoptera,Insecta,1,,ABB,,Nøgle-landmand
+25,Cabro,scutellatus,Sphecoidea,Hymenoptera,Insecta,2,1,ABB,,"Årvinge, Stilkhvepse"
+26,Aglais,io,Nymphalidae,Lepidoptera,Insecta,1,6,CB,,Dagpåfugleøje
+27,Mythimna,ferrago,,,Insecta,1,,ABB,,Rusten græsugle
+28,Elipsocus,hyalinus,Elipsocidae,Psocoptera,Insecta,2,,CB,,bark og bladlus
+29,Enoplognatha,ovata,Theridiidae,Araneae,Arachnida,3,,SK,,Perleedderkop
+30,Formica,rufa,Formicidae,Hymenoptera,Insecta,2,,CB,,
+31,Bombus,pascuorum,Apidae,Hymenoptera,Insecta,2,1,ABB,,Ager humlebi
+32,Nemoura,,Nemouridae,Plecoptera,Insecta,3,,CB,,Slørvinge
+33,Gonepteryx,rhamni,Pieridae,Lepidoptera,Insecta,1,,ABB,,Citronsommerfugl
+34,Larinioides,cornutus,Araneidae,Araneae,Arachnida,2,,SK,,Sivhjuledderkop
+35,Amphipoea,sp,Noctuidae,Lepidoptera,Insecta,1,,ABB,,
+36,Philonicus,albiceps,Asilidae,Diptera,Insecta,2,,ABB,,Almindelig sandrovflue
+37,Idea,aversata,Geometridae,Lepidoptera,Insecta,1,,ABB,,Vinkelengmåler
+38,Pieris,rapae,Pieridae,Lepidoptera,Insecta,1,5,ABB,,Lille kålsommerfugl
+39,Episyrphus,balteatus,Syrphinae,Diptera,Insecta,2,1,CB,,Dobbeltbåndet svirreflue
+40,Coenonumpha,pamphilus,Nymphalidae,Lepidoptera,Insecta,1,5,ABB,,Okkergul randøje
+41,Aphantopus,hyperantus,Nymphalidae,Lepidoptera,Insecta,1,,ABB,,Engrandøje
+42,Maniola,jurtina,Nymphalidae,Lepidoptera,Insecta,1,,ABB,,Græsrandøje
+43,Forficula,auricularia,Forficulidae,Dermaptera,Insecta,2,,CK,,Almindelig ørentvist
+44,Cnaemidophorus,rhododactyla,Pterophoridae,Lepidoptera,Insecta,1,,ABB,,Rosenknopfjermøl
+45,Synaphe,punctalis,Pyralidae,Lepidoptera,Insecta,1,,CB,,
+46,Arenostola,phragmitidis,Noctuidae,Lepidoptera,Insecta,1,,CB,,Tagrørugle
+47,Opilio,canestrinii,Phalangiidae,Opiliones,Arachnida,2,,SK,,Orange vægmejer
+48,Lithobius,forficatus,Lithobiidae,Lithobiomorpha,Chilopoda,2,,ABB,,Stenskolopender
+49,Helophilus,hybridus,Syrphidae,Diptera,Insecta,2,1,ABB,,Hybrid Sumpsvirreflue
+50,Polydesmus,denticulatus,Polydesmidae,Polydesmida,Diplopoda,2,,CB,,
+51,Chrysis,fulgida,Chrysididae,Hymenoptera,Insecta,2,1,ABB,,Blå guldhveps
+52,,,,,,,,,,
+53,,,,,,,,,,
+54,,,,,,,,,,
+55,,,,,,,,,,
+56,,,,,,,,,,
+57,,,,,,,,,,
+58,,,,,,,,,,
+59,,,,,,,,,,
+60,,,,,,,,,,
+61,,,,,,,,,,
+62,,,,,,,,,,
+63,,,,,,,,,,
+64,,,,,,,,,,
+65,,,,,,,,,,
+66,,,,,,,,,,
+67,,,,,,,,,,
+68,,,,,,,,,,
+69,,,,,,,,,,
+70,,,,,,,,,,
+71,,,,,,,,,,
+72,,,,,,,,,,
+73,,,,,,,,,,
+74,,,,,,,,,,
+75,,,,,,,,,,
+76,,,,,,,,,,
+77,,,,,,,,,,
+78,,,,,,,,,,
+79,,,,,,,,,,
+80,,,,,,,,,,
+81,,,,,,,,,,
+82,,,,,,,,,,
+83,,,,,,,,,,
+84,,,,,,,,,,
+85,,,,,,,,,,
+86,,,,,,,,,,
+87,,,,,,,,,,
+88,,,,,,,,,,
+89,,,,,,,,,,
+90,,,,,,,,,,
+91,,,,,,,,,,
+92,,,,,,,,,,
+93,,,,,,,,,,
+94,,,,,,,,,,
+95,,,,,,,,,,
+96,,,,,,,,,,
+97,,,,,,,,,,
+98,,,,,,,,,,
+99,,,,,,,,,,
+100,,,,,,,,,,
+101,,,,,,,,,,
+102,,,,,,,,,,
+103,,,,,,,,,,
+104,,,,,,,,,,
+105,,,,,,,,,,
+106,,,,,,,,,,
+107,,,,,,,,,,
+108,,,,,,,,,,
+109,,,,,,,,,,
+110,,,,,,,,,,
+111,,,,,,,,,,
+112,,,,,,,,,,
+113,,,,,,,,,,
+114,,,,,,,,,,
+115,,,,,,,,,,
+116,,,,,,,,,,
+117,,,,,,,,,,
+118,,,,,,,,,,
+119,,,,,,,,,,
+120,,,,,,,,,,
+121,,,,,,,,,,
+122,,,,,,,,,,
+123,,,,,,,,,,
+124,,,,,,,,,,
+125,,,,,,,,,,
+126,,,,,,,,,,
+127,,,,,,,,,,
+128,,,,,,,,,,
+129,,,,,,,,,,
+130,,,,,,,,,,
+131,,,,,,,,,,
+132,,,,,,,,,,
+133,,,,,,,,,,
+134,,,,,,,,,,
+135,,,,,,,,,,
+136,,,,,,,,,,
+137,,,,,,,,,,
+138,,,,,,,,,,
+139,,,,,,,,,,
+140,,,,,,,,,,
+141,,,,,,,,,,
+142,,,,,,,,,,
+143,,,,,,,,,,
+144,,,,,,,,,,
+145,,,,,,,,,,
+146,,,,,,,,,,
+147,,,,,,,,,,
+148,,,,,,,,,,
+149,,,,,,,,,,
+150,,,,,,,,,,
+151,,,,,,,,,,
+152,,,,,,,,,,
+153,,,,,,,,,,
+154,,,,,,,,,,
+155,,,,,,,,,,
+156,,,,,,,,,,
+157,,,,,,,,,,
+158,,,,,,,,,,
+159,,,,,,,,,,
+160,,,,,,,,,,
+161,,,,,,,,,,
+162,,,,,,,,,,
+163,,,,,,,,,,
+164,,,,,,,,,,
+165,,,,,,,,,,
+166,,,,,,,,,,
+167,,,,,,,,,,
+168,,,,,,,,,,
+169,,,,,,,,,,
+170,,,,,,,,,,
+171,,,,,,,,,,
+172,,,,,,,,,,
+173,,,,,,,,,,
+174,,,,,,,,,,
+175,,,,,,,,,,
+176,,,,,,,,,,
+177,,,,,,,,,,
+178,,,,,,,,,,
+179,,,,,,,,,,
+180,,,,,,,,,,
+181,,,,,,,,,,
+182,,,,,,,,,,
+183,,,,,,,,,,
+184,,,,,,,,,,
+185,,,,,,,,,,
+186,,,,,,,,,,
+187,,,,,,,,,,
+188,,,,,,,,,,
+189,,,,,,,,,,
+190,,,,,,,,,,
+191,,,,,,,,,,
+192,,,,,,,,,,
+193,,,,,,,,,,
+194,,,,,,,,,,
+195,,,,,,,,,,
+196,,,,,,,,,,
+197,,,,,,,,,,
+198,,,,,,,,,,
+199,,,,,,,,,,
+200,,,,,,,,,,
