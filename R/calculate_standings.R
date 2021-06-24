@@ -16,17 +16,7 @@
 #'
 #' @return a tibble ready to use in plot_standings().
 #' @export
-calculate_standings <- function(teams, 
-                      instructors,
-                      family_reward = 1,
-                      order_reward  = 3,
-                      class_reward = 5,
-                      expert_threshold = 4,
-                      NT_reward = 1,
-                      VU_reward = 2,
-                      EN_reward = 3,
-                      CR_reward = 4,
-                      RE_reward = 5
+calculate_standings <- function(teams, instructors, family_reward = 1, order_reward  = 3, class_reward = 5, expert_threshold = 4, NT_reward = 1, VU_reward = 2, EN_reward = 3, CR_reward = 4, RE_reward = 5
 ) {
   
   teams.tidy <- list()
@@ -52,7 +42,7 @@ calculate_standings <- function(teams,
       tidyr::replace_na(list(Lifehistorypoints=0, Keyingpoints = 0, Redlist = 0)) %>%
       dplyr::distinct(Genus, Species, .keep_all = TRUE) %>%
       dplyr::select(ID, Class, Order, Family, Genus, Species, Keyingpoint, Lifehistorypoint, Initials, Redlist) %>%
-      dplyr::filter(Initials %in% Instructors)
+      dplyr::filter(Initials %in% instructors)
   }
   
   species.point <- list()
