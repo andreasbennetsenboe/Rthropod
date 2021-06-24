@@ -34,7 +34,7 @@ The point system rewards a number of things:
 * Encountering a new family (defaults to 1 point*)  
 * Encountering a new order (defaults to 3 points*)  
 * Encountering a new class (defaults to 5 points*)  
-* Getting good at a family. When you encounter a certain number of species within a family an extra point is rewarded per species (threshold is four species*). This is used to encourage people to get good a specific key.  
+* Getting good at a family. When you encounter a certain number of species within a family an extra point is rewarded per species (threshold is four species*). This is used to encourage people to get comfortable at a specific key.  
 * Encountering red listed species. Species listed in the categories NT, VU, EN, CR, RE on the regional IUCN Redlist are rewarded with more points than other species.*  
 
 '*' values can be set differently with the parameters in calculate_standings().  
@@ -75,9 +75,16 @@ list.of.teams <- list(
 You then feed this vector to the function calculate_standings(). If you want to change anything in the point system, the function has a number of parameters for this, see the help file ?calculate_standings for details.
 
 ```{r, echo = FALSE}
-#calculate_standings(teams = list.of.teams,
-#                    instructors = c("ABB", "CK", "SK", "CB")
-#                    )
+standings <- calculate_standings(teams = list.of.teams,
+                    instructors = c("ABB", "CK", "SK", "CB")
+                    )
+standings
+```
+
+The result is a tibble that is ready for the next function that does the plotting:
+
+```{r, echo = FALSE}
+plot_standings(standings)
 ```
 
 

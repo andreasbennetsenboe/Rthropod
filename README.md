@@ -32,7 +32,7 @@ The point system rewards a number of things:
 -   Getting good at a family. When you encounter a certain number of
     species within a family an extra point is rewarded per species
     (threshold is four species\*). This is used to encourage people to
-    get good a specific key.  
+    get comfortable at a specific key.  
 -   Encountering red listed species. Species listed in the categories
     NT, VU, EN, CR, RE on the regional IUCN Redlist are rewarded with
     more points than other species.\*
@@ -96,3 +96,27 @@ You then feed this vector to the function calculate\_standings(). If you
 want to change anything in the point system, the function has a number
 of parameters for this, see the help file ?calculate\_standings for
 details.
+
+    #> Warning in eval_tidy(pair$rhs, env = default_env): NAs introduced by coercion
+    #> # A tibble: 14 x 3
+    #>    Team                         Type    Score
+    #>    <chr>                        <chr>   <int>
+    #>  1 1. Team Ho 1, 2              Score     309
+    #>  2 1. Team Ho 1, 2              Species    57
+    #>  3 2. Klippespringerne          Score     326
+    #>  4 2. Klippespringerne          Species    43
+    #>  5 3. Pismyrene                 Score     269
+    #>  6 3. Pismyrene                 Species    44
+    #>  7 4. Team Trehornet Skarnbasse Score     468
+    #>  8 4. Team Trehornet Skarnbasse Species    53
+    #>  9 5. Arachnitten               Score     512
+    #> 10 5. Arachnitten               Species    92
+    #> 11 6. Malaise campisterne       Score     311
+    #> 12 6. Malaise campisterne       Species    51
+    #> 13 Ved-dyrene                   Score     180
+    #> 14 Ved-dyrene                   Species    25
+
+The result is a tibble that is ready for the next function that does the
+plotting:
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
