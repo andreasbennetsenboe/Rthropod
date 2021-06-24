@@ -29,5 +29,5 @@ plot_standings <- function(x) {
       size=3
     ) +
     ggplot2::theme_minimal()+ 
-    theme(axis.text.x=element_text(angle=45,hjust=1))
+    ggplot2::theme(axis.text.x = ggplot2::element_text(angle=45,hjust=1))
 }
