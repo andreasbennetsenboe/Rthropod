@@ -1,20 +1,22 @@
-#' Title
+#' Calculate standings
+#' 
+#' Calculates the standings in the competition.
 #'
-#' @param teams a list containing a dataframe for each team, see the README document for the format.
+#' @param teams a list containing a data.frame for each team, see the README document for the format.
 #' @param instructors a vector of character strings containing the initials of the teachers.
-#' @param family_reward an integer indicating the number of points rewarded for every new family
-#' @param order_reward 
-#' @param class_reward 
-#' @param expert_threshold 
-#' @param NT_reward 
-#' @param VU_reward 
-#' @param EN_reward 
-#' @param CR_reward 
-#' @param RE_reward 
+#' @param family_reward an integer indicating the number of points rewarded for every new family encountered
+#' @param order_reward an integer indicating the number of points rewarded for every new order encountered
+#' @param class_reward an integer indicating the number of points rewarded for every new class encountered
+#' @param expert_threshold The number of species within a family that has to be encountered for each species to start counting double. set this too a very high number if the feature is not desired.
+#' @param NT_reward an integer indicating the number of points rewarded when encountering a species listed as Near Threatened on the regional IUCN list.
+#' @param VU_reward an integer indicating the number of points rewarded when encountering a species listed as Vulnerable on the regional IUCN list.
+#' @param EN_reward an integer indicating the number of points rewarded when encountering a species listed as Endangered on the regional IUCN list.
+#' @param CR_reward an integer indicating the number of points rewarded when encountering a species listed as Critically endangered on the regional IUCN list.
+#' @param RE_reward an integer indicating the number of points rewarded when encountering a species listed as Regionally Extinct on the regional IUCN list.
 #'
 #' @return a tibble ready to use in plot_standings().
 #' @export
-calculate <- function(teams, 
+calculate_standings <- function(teams, 
                       instructors,
                       family_reward = 1,
                       order_reward  = 3,
@@ -37,7 +39,7 @@ calculate <- function(teams,
   
   for (i in 1:length(teams)) {
     teams.tidy[[i]] <- teams[[i]] %>%
-      mutate(Redlist = case_when(
+      dplyr::mutate(Redlist = dplyr::case_when(
         Redlist %in% c("LC", "Lc", "lc", "NA", "Na", "na", "DD", "Dd", "dd", "NE", "Ne", "ne") ~ 0,
         Redlist %in% NT ~ NT_reward,
         Redlist %in% VU ~ VU_reward,
@@ -47,79 +49,79 @@ calculate <- function(teams,
         TRUE ~ as.numeric(Redlist)
       )
       ) %>%
-      replace_na(list(Lifehistorypoints=0, Keyingpoints = 0, Redlist = 0)) %>%
-      distinct(Genus, Species, .keep_all = TRUE) %>%
-      select(ID, Class, Order, Family, Genus, Species, Keyingpoint, Lifehistorypoint, Initials, Redlist) %>%
-      filter(Initials %in% Instructors)
+      tidyr::replace_na(list(Lifehistorypoints=0, Keyingpoints = 0, Redlist = 0)) %>%
+      dplyr::distinct(Genus, Species, .keep_all = TRUE) %>%
+      dplyr::select(ID, Class, Order, Family, Genus, Species, Keyingpoint, Lifehistorypoint, Initials, Redlist) %>%
+      dplyr::filter(Initials %in% Instructors)
   }
   
   species.point <- list()
   
   for (i in 1:length(teams.tidy)) {
     species.point[[i]] <- teams.tidy[[i]] %>%       
-      distinct(Genus, Species) %>%
-      summarise(n())
+      dplyr::distinct(Genus, Species) %>%
+      dplyr::summarise(dplyr::n())
   }
   
   expert.point <- list()
   
   for (i in 1:length(teams.tidy)) {
     expert.point[[i]] <- teams.tidy[[i]] %>%
-      count(Family) %>%
-      filter(n>expert_threshold) %>%
-      summarise(n=sum(n))
+      dplyr::count(Family) %>%
+      dplyr::filter(n>expert_threshold) %>%
+      dplyr::summarise(n=sum(n))
   }
   
   family.point <- list()
   
   for (i in 1:length(teams.tidy)) {
     family.point[[i]] <- teams.tidy[[i]] %>%
-      summarise(n_distinct(Family)*family_reward)
+      dplyr::summarise(dplyr::n_distinct(Family)*family_reward)
   }
   
   order.point <- list()
   
   for (i in 1:length(teams.tidy)) {
     order.point[[i]] <- teams.tidy[[i]] %>%
-      summarise(n_distinct(Order)*order_reward)
+      dplyr::summarise(dplyr::n_distinct(Order)*order_reward)
   }
   
   class.point <- list()
   
   for (i in 1:length(teams.tidy)) {
     class.point[[i]] <- teams.tidy[[i]] %>%
-      summarise(n_distinct(Class)*class_reward)
+      dplyr::summarise(dplyr::n_distinct(Class)*class_reward)
   }
   
   keying.point <- list()
   
   for (i in 1:length(teams.tidy)) {
     keying.point[[i]] <- teams.tidy[[i]] %>%
-      summarise(sum(Keyingpoint, na.rm = TRUE))
+      dplyr::summarise(sum(Keyingpoint, na.rm = TRUE))
   }
   
   redlist.point <- list()
   
   for (i in 1:length(teams.tidy)) {
     redlist.point[[i]] <- teams.tidy[[i]] %>%
-      summarise(sum(Redlist))
+      dplyr::summarise(sum(Redlist))
   }
   
   lifehistory.point <- list()
   
   for (i in 1:length(teams.tidy)) {
     lifehistory.point[[i]] <- teams.tidy[[i]] %>%
-      summarise(sum(Lifehistorypoint, na.rm = TRUE))
+      dplyr::summarise(sum(Lifehistorypoint, na.rm = TRUE))
   }
   
   team.members <- c()
   for (i in 1:length(teams)) {
-    team.members[i] <- first(teams[[i]]$Members)
+    team.members[i] <- dplyr::first(teams[[i]]$Members)
   }
   
   team.names <- c()
   for (i in 1:length(teams)) {
-    team.names[i] <- first(teams[[i]]$Team)
+    team.names[i] <- dplyr::first(teams[[i]]$Team)
   }
   
   quiz.point <- c()
@@ -140,7 +142,7 @@ calculate <- function(teams,
   All_teams <- data.frame(team.names, Score, Species)
   
   All_teams %>%
-    pivot_longer(c(Score, Species), names_to = "Type", values_to = "Score") %>%
-    mutate(Score=as.integer(Score)) %>%
-    select("Team" = team.names, Type, Score)
+    tidyr::pivot_longer(c(Score, Species), names_to = "Type", values_to = "Score") %>%
+    dplyr::mutate(Score=as.integer(Score)) %>%
+    dplyr::select("Team" = team.names, Type, Score)
 }

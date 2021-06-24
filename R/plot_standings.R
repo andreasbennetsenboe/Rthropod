@@ -1,24 +1,32 @@
+#' Make a plot of the standings
+#'
+#'Takes a tibble prepared by calculate_standings() and makes an overview plot of the competition standings.
+#'
+#' @param x A tibble prepared by calculate_standings()
+#'
+#' @return a ggplot2 barplot.
+#' @export
 plot_standings <- function(x) {
-  ggplot(
+  ggplot2::ggplot(
     x, 
-    aes(
+    ggplot2::aes(
       Team, 
       Score,
       fill=Type
     )
   ) +
-    geom_bar(
+    ggplot2::geom_bar(
       stat="identity",
-      position = position_dodge(),
+      position = ggplot2::position_dodge(),
       width=0.5
     ) +
-    geom_text(
-      aes(
+    ggplot2::geom_text(
+      ggplot2::aes(
         label=(Score)
       ), 
       vjust=-0.5, 
-      position = position_dodge(0.5), 
+      position = ggplot2::position_dodge(0.5), 
       size=3
     ) +
-    theme_minimal()
+    ggplot2::theme_minimal()
 }
