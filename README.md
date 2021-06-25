@@ -77,9 +77,12 @@ data set to show how the data should be structured:
 
 For people that are not used to working with R or .csv files one can use
 the ‘pointscheme.xlsx’ to record observations and then save as a .csv
-file and just name it the integer that represents the group. When all
-schemes are collected at the end of the day you can start importing. Do
-this as a list of data.frames:
+file and just name it the integer that represents the group. Note the
+column named ‘initials’ this is where the teams put the initials of the
+instructor that has approved their record, this information is later
+used to drop rows containing records that have not been approved. When
+all schemes are collected at the end of the day you can start importing.
+Do this as a list of data.frames:
 
 ``` r
 library(touRdemols)
@@ -95,12 +98,20 @@ list.of.teams <- list(
 )
 ```
 
-Don’t mind the warning about NA’s introduced by coercion.
+You might want to change the reading function to your favorite .csv
+reading function, and adjust the separator. Don’t mind the warning about
+NA’s introduced by coercion.
 
 You then feed this list to the function calculate\_standings(). If you
 want to change anything in the point system, the function has a number
 of parameters for this, see the help file ?calculate\_standings for
 details.
+
+``` r
+standings <- calculate_standings(teams = list.of.teams,
+                    instructors = c("ABB", "CK", "SK", "CB")
+                    )
+```
 
 | Team                          | Type    | Score |
 |:------------------------------|:--------|------:|
@@ -116,10 +127,10 @@ details.
 | 5\. Arachnitten               | Species |    92 |
 | 6\. Malaise campisterne       | Score   |   311 |
 | 6\. Malaise campisterne       | Species |    51 |
-| Ved-dyrene                    | Score   |   180 |
-| Ved-dyrene                    | Species |    25 |
+| 7\. Ved-dyrene                | Score   |   180 |
+| 7\. Ved-dyrene                | Species |    25 |
 
 This tibble sums up the standings and is ready for the next function
 that does the plotting:
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
