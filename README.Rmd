@@ -76,11 +76,11 @@ list.of.teams <- list(
 
 You might want to change the reading function to your favorite .csv reading function, and adjust the separator. Don't mind the warning about NA's introduced by coercion.
 
-You then feed this list to the function calculate_standings(). If you want to change anything in the point system, the function has a number of parameters for this, see the help file ?calculate_standings for details.
+You then feed this list to the function calculate_standings(). If you want to change anything in the point system, the function has a number of parameters for this, see the help file ?calculate_standings for details. Notice the argument 'instructors', this is where you should put in the initials of the instructors that are approving records.
 
 ```{r, warning=FALSE}
 standings <- calculate_standings(teams = list.of.teams,
-                    instructors = c("ABB", "CK", "SK", "CB")
+                                 instructors = c("ABB", "CK", "SK", "CB")
                     )
 ```
 

@@ -105,11 +105,12 @@ NA’s introduced by coercion.
 You then feed this list to the function calculate\_standings(). If you
 want to change anything in the point system, the function has a number
 of parameters for this, see the help file ?calculate\_standings for
-details.
+details. Notice the argument ‘instructors’, this is where you should put
+in the initials of the instructors that are approving records.
 
 ``` r
 standings <- calculate_standings(teams = list.of.teams,
-                    instructors = c("ABB", "CK", "SK", "CB")
+                                 instructors = c("ABB", "CK", "SK", "CB")
                     )
 ```
 
