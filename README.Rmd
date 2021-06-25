@@ -36,6 +36,8 @@ The point system rewards a number of things:
 * Encountering a new class (defaults to 5 points*)  
 * Getting good at a family. When you encounter a certain number of species within a family an extra point is rewarded per species (threshold is four species*). This is used to encourage people to get comfortable at a specific key.  
 * Encountering red listed species. Species listed in the categories NT, VU, EN, CR, RE on the regional IUCN Redlist are rewarded with more points than other species.*  
+* Encountering organisms with exiting life histories e.g. migrating hoverflies, ant mimicry etc. Make a separate document for these and let participants fill in the column themselves, the script works fine if this column is left empty.  
+* Keying to identify requires more effort than just knowing the organsim. Let the participants fill in the column themselves. We usually do 2 points for keying, 1 point for looking through field guide pictures (porn keying). and 0 if the ID was provided by someone else.
 
 '*' values can be set differently with the parameters in calculate_standings().  
 
@@ -50,13 +52,13 @@ devtools::install_github("andreasbennetsenboe/touRdemols")
 
 ## Example
 
-The folder 'exampledata' contains seven data sets from teams that competed against each other in the Tour de Mols. We use these here to illustrate how to use the package. Furthermore it contains a little test data set to show how the data should be structured:
+The folder 'exampledata' contains seven data sets from teams that competed against each other in the Tour de Mols. They are used here to illustrate how to use the package. Furthermore it contains a little test data set to show how the data should be structured:
 
 ```{r, echo = FALSE, results='asis'}
 knitr::kable(utils::head(read.csv2("exampledata/test.csv")))
 ```
 
-For people that are not used to working with R or .csv files one can use the 'pointscheme.xlsx' to record observations and then save as a .csv file and just name it the integer that represents the group. When all schemes are collected at the end of the day you can start importing. Do this as a list of teams:
+For people that are not used to working with R or .csv files one can use the 'pointscheme.xlsx' to record observations and then save as a .csv file and just name it the integer that represents the group. When all schemes are collected at the end of the day you can start importing. Do this as a list of data.frames:
  
 ```{r example}
 library(touRdemols)
@@ -72,16 +74,18 @@ list.of.teams <- list(
 )
 ```
 
+Don't mind the warning about NA's introduced by coercion.
+
 You then feed this list to the function calculate_standings(). If you want to change anything in the point system, the function has a number of parameters for this, see the help file ?calculate_standings for details.
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, warning=FALSE}
 standings <- calculate_standings(teams = list.of.teams,
                     instructors = c("ABB", "CK", "SK", "CB")
                     )
-standings
+knitr::kable(standings)
 ```
 
-The result is a tibble that is ready for the next function that does the plotting:
+This tibble sums up the standings and is ready for the next function that does the plotting:
 
 ```{r, echo = FALSE}
 plot_standings(standings)
