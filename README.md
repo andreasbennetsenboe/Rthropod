@@ -57,26 +57,20 @@ competed against each other in the Tour de Mols. We use these here to
 illustrate how to use the package. Furthermore it contains a little test
 data set to show how the data should be structured:
 
-    #>   ID   Class      Order        Family         Genus      Species Keyingpoint
-    #> 1  1 Insecta Coleoptera    Elateridae    Negastrius   sabulicola           1
-    #> 2  2 Insecta Coleoptera Curculionidae     Mogulones       javeti           1
-    #> 3  3 Insecta Coleoptera Curculionidae Trachyphloeus  scabriculus           1
-    #> 4  4 Insecta Coleoptera    Elateridae       Ampedus     nigrinus           1
-    #> 5  5 Insecta Coleoptera    Elateridae       Ampedus erythrogonus           2
-    #> 6  6 Insecta Coleoptera    Elateridae       Ampedus     promorum           2
-    #>   Lifehistorypoint Initials Redlist               Team Members Quizpoint
-    #> 1               NA      ABB      LC 1. Weevil Rock You       3        50
-    #> 2               NA      ABB      LC                         NA        NA
-    #> 3               NA      ABB      LC                         NA        NA
-    #> 4               NA      ABB      LC                         NA        NA
-    #> 5                5      ABB      NT                         NA        NA
-    #> 6               NA      ABB      LC                         NA        NA
+|  ID | Class   | Order      | Family        | Genus         | Species      | Keyingpoint | Lifehistorypoint | Initials | Redlist | Team                | Members | Quizpoint |
+|----:|:--------|:-----------|:--------------|:--------------|:-------------|------------:|-----------------:|:---------|:--------|:--------------------|--------:|----------:|
+|   1 | Insecta | Coleoptera | Elateridae    | Negastrius    | sabulicola   |           1 |               NA | ABB      | LC      | 1\. Weevil Rock You |       3 |        50 |
+|   2 | Insecta | Coleoptera | Curculionidae | Mogulones     | javeti       |           1 |               NA | ABB      | LC      |                     |      NA |        NA |
+|   3 | Insecta | Coleoptera | Curculionidae | Trachyphloeus | scabriculus  |           1 |               NA | ABB      | LC      |                     |      NA |        NA |
+|   4 | Insecta | Coleoptera | Elateridae    | Ampedus       | nigrinus     |           1 |               NA | ABB      | LC      |                     |      NA |        NA |
+|   5 | Insecta | Coleoptera | Elateridae    | Ampedus       | erythrogonus |           2 |                5 | ABB      | NT      |                     |      NA |        NA |
+|   6 | Insecta | Coleoptera | Elateridae    | Ampedus       | promorum     |           2 |               NA | ABB      | LC      |                     |      NA |        NA |
 
 For people that are not used to working with R or .csv files one can use
-the ‘pointscheme.xlsx’ to record your observations and then save as a
-.csv file and just name it the integer that represents your group. When
-all schemes are sent to you at the end of the day you can start
-importing. Do this as a list of teams:
+the ‘pointscheme.xlsx’ to record observations and then save as a .csv
+file and just name it the integer that represents the group. When all
+schemes are collected at the end of the day you can start importing. Do
+this as a list of teams:
 
 ``` r
 library(touRdemols)
@@ -92,7 +86,7 @@ list.of.teams <- list(
 )
 ```
 
-You then feed this vector to the function calculate\_standings(). If you
+You then feed this list to the function calculate\_standings(). If you
 want to change anything in the point system, the function has a number
 of parameters for this, see the help file ?calculate\_standings for
 details.
