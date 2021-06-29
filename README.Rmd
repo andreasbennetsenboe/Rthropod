@@ -90,7 +90,7 @@ knitr::kable(standings)
 
 This tibble sums up the standings and is ready for the next function that does the plotting:
 
-```{r, echo = FALSE}
+```{r}
 plot_standings(standings)
 ```
 

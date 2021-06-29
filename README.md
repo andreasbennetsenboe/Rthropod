@@ -134,4 +134,8 @@ standings <- calculate_standings(teams = list.of.teams,
 This tibble sums up the standings and is ready for the next function
 that does the plotting:
 
+``` r
+plot_standings(standings)
+```
+
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
